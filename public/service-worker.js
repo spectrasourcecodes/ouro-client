@@ -1,6 +1,6 @@
 // public/service-worker.js
 
-const CACHE_NAME = 'ArkInvest-v1';
+const CACHE_NAME = 'OuroInvest-v1';
 
 const STATIC_ASSETS = [
   '/',
