@@ -356,7 +356,7 @@ const Dashboard = () => {
     dailyChange: wallet?.balance ? wallet.balance * 0.0189 : 0, // Example: 1.89% of balance
     dailyChangePercent: 1.89,
     totalProfit: wallet?.profit || 0,
-    profitPercent: wallet?.balance ? (wallet.profit / wallet.balance) * 100 : 0,
+    profitPercent: wallet?.balance + wallet?.profit || 0,
     availableForWithdrawal: wallet?.kyc ? wallet?.balance * 0.8 : 0, // 80% available if KYC verified
     investedAmount: wallet?.balance ? wallet.balance - (wallet?.balance * 0.2) : 0, // 80% invested
   };
