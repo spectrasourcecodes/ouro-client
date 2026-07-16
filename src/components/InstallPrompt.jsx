@@ -37,7 +37,7 @@ const InstallPrompt = () => {
               <Download className="w-5 h-5 text-white" />
             </div>
             <div>
-              <h3 className="font-semibold">Install Ark App</h3>
+              <h3 className="font-semibold">Install Ouro Invest App</h3>
               <p className="text-sm text-gray-600">Get faster access and offline support</p>
             </div>
           </div>

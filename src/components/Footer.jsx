@@ -13,7 +13,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 text-transparent bg-clip-text">
-              ARK
+              Ouro Invest
             </h3>
             <p className="text-gray-600 text-sm leading-relaxed">
               Next-generation crypto investment platform for the modern investor. 
@@ -22,7 +22,7 @@ const Footer = () => {
             <div className="flex items-center space-x-1 text-sm text-gray-500">
               <span>Made with</span>
               <Heart className="w-4 h-4 text-red-500 fill-current" />
-              <span>by Ark Team</span>
+              <span>by Ouro Invest Team</span>
             </div>
           </div>
           
@@ -110,7 +110,7 @@ const Footer = () => {
         
         {/* Bottom Bar */}
         <div className="border-t mt-8 pt-8 flex flex-col sm:flex-row justify-between items-center text-sm text-gray-600">
-          <p>© {currentYear} Ark Investment. All rights reserved.</p>
+          <p>© {currentYear} Ouro Investment. All rights reserved.</p>
           <div className="flex space-x-6 mt-4 sm:mt-0">
             <a href="#" className="hover:text-blue-600 transition-colors">
               Security

@@ -80,7 +80,7 @@ const Invest = () => {
     ETH: '13u1DCFYTkzd7cNTiUEMkR3YmQVShovkZw',
     USDT: '13u1DCFYTkzd7cNTiUEMkR3YmQVShovkZw',
     SOL: '13u1DCFYTkzd7cNTiUEMkR3YmQVShovkZw',
-    BRL: 'fail to load key. contsct admin', // 🔥 replace later
+    BRL: 'fail to load key. contsct admin', 
   };
 
   const selectedAssetData = assets.find(a => a.id === selectedAsset);

@@ -59,8 +59,8 @@ const Navbar = ({ isAuthenticated }) => {
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
             <Link to="/" className="flex items-center space-x-2">
-              <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 text-transparent bg-clip-text">ARK</span>
-              <span className="text-sm text-gray-500">invest</span>
+              <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 text-transparent bg-clip-text">Ouro</span>
+              <span className="text-sm text-gray-500">Invest</span>
             </Link>
             
             <div className="flex items-center space-x-8">
@@ -115,7 +115,7 @@ const Navbar = ({ isAuthenticated }) => {
       <nav className="md:hidden fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 shadow-sm">
         <div className="px-4 py-3 flex justify-between items-center">
           <Link to="/" className="flex items-center space-x-1">
-            <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 text-transparent bg-clip-text">ARK</span>
+            <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 text-transparent bg-clip-text">Ouro Invest</span>
           </Link>
           
           <button

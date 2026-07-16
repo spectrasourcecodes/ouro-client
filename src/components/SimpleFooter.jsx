@@ -11,7 +11,7 @@ const SimpleFooter = () => {
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex flex-col sm:flex-row justify-between items-center text-sm text-gray-600">
           <div className="flex items-center space-x-1 mb-2 sm:mb-0">
-            <span>© {currentYear} Ark Investment.</span>
+            <span>© {currentYear} Ouro Investment.</span>
             <span className="hidden sm:inline">All rights reserved.</span>
           </div>
           
@@ -33,7 +33,7 @@ const SimpleFooter = () => {
           <div className="flex items-center space-x-1 mt-2 sm:mt-0">
             <span>Made with</span>
             <Heart className="w-4 h-4 text-red-500 fill-current" />
-            <span>by Ark</span>
+            <span>by Ouro Invest Team</span>
           </div>
         </div>
       </div>

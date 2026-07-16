@@ -84,7 +84,7 @@ const Home = () => {
     {
       name: 'Ana Souza',
       role: 'Investidora Crypto',
-      content: 'A Ark transformou como invisto em criptomoedas. Os retornos são impressionantes e a plataforma é incrivelmente fácil de usar.',
+      content: 'A Ouro Invest transformou como invisto em criptomoedas. Os retornos são impressionantes e a plataforma é incrivelmente fácil de usar.',
       rating: 5,
       avatar: 'AS'
     },
@@ -129,7 +129,7 @@ const Home = () => {
             </h1>
             
             <p className="text-xl md:text-2xl mb-10 text-gray-100 max-w-2xl mx-auto opacity-90">
-              Junte-se a mais de 125.000 investidores que confiam na Ark para sua jornada de investimentos em cripto
+              Junte-se a mais de 125.000 investidores que confiam na Ouro Invest para sua jornada de investimentos em cripto
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -305,7 +305,7 @@ const Home = () => {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Por que Escolher a Ark?</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Por que Escolher a Ouro Invest?</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Experimente a próxima geração de investimentos em cripto
             </p>
@@ -365,7 +365,7 @@ const Home = () => {
                 key={index} 
                 className="group bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100"
               >
-                {/* Quote mark */}
+                {/* Quote mOuro Invest */}
                 <div className="text-6xl font-serif text-blue-200 mb-4">"</div>
                 
                 <p className="text-gray-700 mb-6 leading-relaxed">
@@ -412,7 +412,7 @@ const Home = () => {
                 Pronto para Começar Sua Jornada de Investimentos?
               </h2>
               <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto">
-                Junte-se a milhares de investidores que confiam na Ark para seus investimentos em cripto e comece a ganhar hoje
+                Junte-se a milhares de investidores que confiam na Ouro Invest para seus investimentos em cripto e comece a ganhar hoje
               </p>
               
               <Link 
