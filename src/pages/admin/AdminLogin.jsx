@@ -95,7 +95,7 @@ const AdminLogin = () => {
               <div className="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center">
                 <Shield className="w-5 h-5 text-white" />
               </div>
-              <span className="text-xl font-bold text-white">Ark Admin</span>
+              <span className="text-xl font-bold text-white">Ouro Admin Panel</span>
             </div>
           </div>
 
@@ -118,7 +118,7 @@ const AdminLogin = () => {
                   value={formData.email}
                   onChange={(e) => setFormData({...formData, email: e.target.value})}
                   className="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-red-500/20 focus:border-red-500 transition-all text-white placeholder-gray-500"
-                  placeholder="admin@ark.com"
+                  placeholder="admin@ouro.com"
                 />
               </div>
             </div>
@@ -159,7 +159,7 @@ const AdminLogin = () => {
             <div className="mt-4 p-4 bg-gray-800 rounded-xl border border-gray-700">
               <p className="text-sm text-gray-400 mb-2">Demo admin credentials:</p>
               <div className="space-y-1 text-sm">
-                <p><span className="text-gray-300">Email:</span> admin@ark.com</p>
+                <p><span className="text-gray-300">Email:</span> admin@ouro.com</p>
                 <p><span className="text-gray-300">Password:</span> admin123</p>
               </div>
             </div>
