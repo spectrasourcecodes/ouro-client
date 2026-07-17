@@ -27,13 +27,10 @@ import AdminDashboard from './pages/admin/AdminDashboard';
 import AdminUsers from './pages/admin/AdminUsers';
 import AdminProfile from './pages/admin/AdminProfile';
 import KycReceipts from './pages/admin/KycReceipts';
-// NEW: AdminLayout component
-import AdminLayout from './pages/admin/AdminLayout';
 
-// Maintenance page
-import Maintenance from './pages/Maintenance';
-
-// Set maintenance mode (false = live)
+// maintenance page
+import Maintenance from "./pages/Maintenance";
+// set maintenance
 const maintenanceMode = false;
 
 // Protected Route Components
@@ -57,10 +54,10 @@ function App() {
     setIsAuthenticated(!!token);
   }, [location]);
 
-  // Determine if current route is an admin route (including login)
+  // Determine if current route is admin route
   const isAdminRoute = location.pathname.startsWith('/admin');
-
-  // Footer conditions (unchanged)
+  
+  // Determine which footer to show based on route
   const showFullFooter = location.pathname === '/' && !isAdminRoute;
   const showSimpleFooter = !['/', '/login', '/register', '/admin/login'].includes(location.pathname) && !isAdminRoute;
   const showNoFooter = ['/login', '/register', '/admin/login'].includes(location.pathname) || isAdminRoute;
@@ -70,22 +67,27 @@ function App() {
       <div className="min-h-screen flex flex-col bg-gray-50">
         {/* Only show Navbar for non-admin routes */}
         {!isAdminRoute && <Navbar isAuthenticated={isAuthenticated} />}
-
+        
+    
         <main className="flex-grow pt-16 md:pt-0">
+
           {maintenanceMode ? (
+
             <Routes>
               <Route path="/maintenance" element={<Maintenance />} />
               <Route path="*" element={<Navigate to="/maintenance" replace />} />
             </Routes>
+
           ) : (
+
             <Routes>
-              {/* ===== Public Routes ===== */}
+              {/* Public Routes */}
               <Route path="/" element={<Home />} />
               <Route path="/register" element={<Register />} />
               <Route path="/login" element={<Login />} />
               <Route path="/market" element={<Market />} />
 
-              {/* ===== Protected User Routes ===== */}
+              {/* Protected User Routes */}
               <Route
                 path="/dashboard"
                 element={
@@ -94,6 +96,7 @@ function App() {
                   </ProtectedRoute>
                 }
               />
+
               <Route
                 path="/invest"
                 element={
@@ -102,6 +105,7 @@ function App() {
                   </ProtectedRoute>
                 }
               />
+
               <Route
                 path="/withdraw"
                 element={
@@ -110,14 +114,19 @@ function App() {
                   </ProtectedRoute>
                 }
               />
+
               <Route
                 path="/kyc"
                 element={
                   <ProtectedRoute isAllowed={isAuthenticated} redirectTo="/login">
-                    <KYC kycStatus={kycStatus} setKycStatus={setKycStatus} />
+                    <KYC
+                      kycStatus={kycStatus}
+                      setKycStatus={setKycStatus}
+                    />
                   </ProtectedRoute>
                 }
               />
+
               <Route
                 path="/profile"
                 element={
@@ -127,40 +136,60 @@ function App() {
                 }
               />
 
-              {/* ===== Admin Routes ===== */}
-              {/* Admin Login – standalone, no layout */}
+              {/* Admin Routes */}
               <Route path="/admin/login" element={<AdminLogin />} />
 
-              {/* All other admin pages share the AdminLayout and are protected */}
               <Route
-                path="/admin"
+                path="/admin/dashboard"
                 element={
                   <AdminRoute>
-                    <AdminLayout />
+                    <AdminDashboard />
                   </AdminRoute>
                 }
-              >
-                {/* Default redirect to dashboard */}
-                <Route index element={<Navigate to="/admin/dashboard" replace />} />
-                <Route path="dashboard" element={<AdminDashboard />} />
-                <Route path="users" element={<AdminUsers />} />
-                <Route path="profile" element={<AdminProfile />} />
-                <Route path="kyc-receipts" element={<KycReceipts />} />
-              </Route>
+              />
+
+              <Route
+                path="/admin/users"
+                element={
+                  <AdminRoute>
+                    <AdminUsers />
+                  </AdminRoute>
+                }
+              />
+
+              <Route
+                path="/admin/profile"
+                element={
+                  <AdminRoute>
+                    <AdminProfile />
+                  </AdminRoute>
+                }
+              />
+
+              <Route
+                path="/admin/kyc-receipts"
+                element={
+                  <AdminRoute>
+                    <KycReceipts />
+                  </AdminRoute>
+                }
+              />
 
               {/* Catch all */}
               <Route path="*" element={<Navigate to="/" />} />
             </Routes>
-          )}
-        </main>
 
-        {/* Conditional Footer Rendering – only for non-admin routes */}
+          )}
+
+        </main>
+        
+        {/* Conditional Footer Rendering - only for non-admin routes */}
         {!isAdminRoute && showFullFooter && <Footer />}
         {!isAdminRoute && showSimpleFooter && <SimpleFooter />}
-
+        
         <InstallPrompt />
-        <ToastContainer
-          position="top-center"
+        <ToastContainer 
+          position="top-center" 
           autoClose={4000}
           toastClassName="rounded-xl"
         />
